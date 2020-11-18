@@ -3,7 +3,6 @@ import {useParams} from 'react-router';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Button from './Button';
 
 const InStock = () =>{
     const {manu, id}=useParams();

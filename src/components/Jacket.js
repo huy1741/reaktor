@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import ItemDetails from './ItemDetails';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 const Jacket = () =>{
 
     const [info, fetchData]=useState([]);
@@ -15,12 +17,12 @@ const Jacket = () =>{
       
     },[]);
     
-    const accessories = info.map(item=> 
+    const jackets = info.map(item=> 
         <ItemDetails key={item.id} item={item.type} id={item.id} price={item.price} color={item.color[0]}  manu={item.manufacturer} name={item.name}/>
         )
     
     return <React.Fragment >
-        {accessories}
+        {info.length !== 0 ? jackets : <CircularProgress style={{marginLeft: '30rem'}}/>}
             </React.Fragment>
         }
     

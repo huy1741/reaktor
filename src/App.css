@@ -33,6 +33,7 @@
   grid-gap: 50px;
   height: 100vh;
   background-color: #fff;
+  margin-top: 50px;
 }
 
 
@@ -46,6 +47,7 @@
   font-family: 'Baloo Paaji 2', cursive;
 }
 
+a { color: white; }
 .container3 {
   padding: 10px;
   margin-top: 300px;

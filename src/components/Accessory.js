@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import ItemDetails from './ItemDetails';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Accessory = () =>{
 
@@ -21,7 +22,7 @@ const accessories = info.map(item=>
     )
 
 return <React.Fragment >
-    {accessories}
+    {info.length !== 0 ? accessories : <CircularProgress style={{marginLeft: '30rem'}}/> }
         </React.Fragment>
     }
 
